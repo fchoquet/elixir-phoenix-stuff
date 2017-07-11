@@ -21,6 +21,8 @@ defmodule HelloPhoenix.Router do
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
     get "/hello/:format/:messenger", HelloController, :show
+
+    resources "/users", UserController
   end
 
   scope "/admin", HelloPhoenix.Admin, as: :admin do
